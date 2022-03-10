@@ -8,6 +8,7 @@ class BooksController < ApplicationController
 
   def index
     @book = Book.new
+    @book.user_id = current_user.id
     @books = Book.all
   end
 
