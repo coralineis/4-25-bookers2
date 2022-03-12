@@ -26,51 +26,37 @@
             <ul class="navbar-nav ml-auto">
               <% if user_signed_in? %>
                 <li class="row m-2">
-                  <div>
-                    <%= link_to "Home", user_path(current_user.id), class: 'fas fa-home nav-link text-light' %>
-                  </div>
-                  <div class="text-light">Home</div>
+                  <i class="fas fa-home nav-link text-light"></i>
+                  <%= link_to "Home", user_path(current_user.id), class: 'text-light' %>
                 </li>
                 <li class="row m-2">
-                  <div>
-                    <%= link_to "Users", users_path, class: 'fas fa-users nav-link text-light' %>
-                  </div>
-                  <div class="text-light">Users</div>
+                  <i class="fas fa-users nav-link text-light"></i>
+                  <%= link_to "Users", users_path, class: 'text-light' %>
                 </li>
                 <li class="row m-2">
-                  <div>
-                    <%= link_to "Books", books_path, class: "fas nav-link fa-book-open text-light" %>
-                  </div>
-                  <div class="text-light">Books</div>
+                  <i class="fas nav-link fa-book-open text-light"></i>
+                  <%= link_to "Books", books_path, class: 'text-light' %>
                 </li>
                 <li class="row m-2">
-                  <%= link_to "Log out", destroy_user_session_path, method: :delete %>
                   <i class="fas fa-sign-out-alt nav-link text-light"></i>
+                  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "text-light" %>
                 </li>
               <% else %>
                 <li class="row m-2">
-                  <div>
-                    <%= link_to "Home", root_path, class: 'fas fa-home nav-link text-light' %>
-                  </div>
-                  <div class="text-light">Home</div>
+                  <i class="fas fa-home nav-link text-light"></i>
+                  <%= link_to "Home", root_path, class: 'text-light' %>
                 </li>
                 <li class="row m-2">
-                  <div>
-                    <%= link_to "About", about_path, class: 'fas fa-link nav-link text-light' %>
-                  </div>
-                  <div class="text-light">About</i>
+                  <i class="fas fa-link nav-link text-light"></i>
+                  <%= link_to "About", about_path, class: 'text-light' %>
                 </li>
                 <li class="row m-2">
-                  <div>
-                    <%= link_to "Sign up", new_user_registration_path, class: 'fas fa-sign-up-alt nav-link text-light' %>
-                  </div>
-                  <div class="text-light">Sign up</div>
+                  <i class="fas fa-sign-up-alt nav-link text-light"></i>
+                  <%= link_to "Sign up", new_user_registration_path, class: 'text-light' %>
                 </li>
                 <li class="row m-2">
-                  <div>
-                    <%= link_to "Log in", new_user_session_path, class: 'fas fa-sign-in-alt nav-link text-light' %>
-                  </div>
-                  <div class="text-light">Log in</div>
+                  <i class="fas fa-sign-in-alt nav-link text-light"></i>
+                  <%= link_to "Log in", new_user_session_path, class: 'text-light' %>
                 </li>
               <% end %>
             </ul>
